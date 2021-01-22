@@ -88,7 +88,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 
         /* Monitors */
-	{ MODKEY,                       XK_m,      focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_s,      focusmon,       {.i = +1 } },
 	//{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	//{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_m,      tagmon,         {.i = +1 } },
