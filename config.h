@@ -88,7 +88,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 
         /* Monitors */
-	{ MODKEY,                       XK_s,      focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_m,      focusmon,       {.i = +1 } },
 	//{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	//{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_m,      tagmon,         {.i = +1 } },
@@ -145,7 +145,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
         { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
         { MODKEY,                       XK_c,      spawn,          {.v = workcmd } },
-        { MODKEY,                       XK_m,      spawn,          {.v = mediacmd } },
+        { MODKEY,                       XK_s,      spawn,          {.v = mediacmd } },
         { MODKEY,                       XK_r,      spawn,          {.v = rsscmd } },
         { MODKEY,                       XK_x,      spawn,          {.v = fmgrcmd } },
 };
