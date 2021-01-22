@@ -21,6 +21,15 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { SelColorFG , SelColorBG , SelColorBorder  },
 };
 
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -33,6 +42,7 @@ static const Rule rules[] = {
         { "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
+
 
 /* layout(s) */
 static const float mfact     = 0.55;    /* factor of master area size [0.05..0.95] */
