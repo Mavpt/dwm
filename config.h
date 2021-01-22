@@ -71,10 +71,13 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", NormColorBG, "-nf", NormColorFG, "-sb", SelColorBorder, "-sf", SelColorFG, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", NormColorBG, "-nf", NormColorFG, "-sb", SelColorBorder, "-sf", SelColorFG, NULL };
+static const char *termcmd[]    = { "alacritty", NULL };
 static const char *browsercmd[] = { "brave", NULL };
-static const char *workcmd[] = { "chromium", NULL };
+static const char *workcmd[]    = { "chromium", NULL };
+static const char *mediacmd[]   = { "alacritty", "-e", "ncmpcpp", NULL };
+static const char *rsscmd[]     = { "alacritty", "-e", "newsboat", NULL };
+static const char *fmgrcmd[]    = { "alacritty", "-e", "ranger", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -142,6 +145,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
         { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
         { MODKEY,                       XK_c,      spawn,          {.v = workcmd } },
+        { MODKEY,                       XK_m,      spawn,          {.v = mediacmd } },
+        { MODKEY,                       XK_r,      spawn,          {.v = rsscmd } },
+        { MODKEY,                       XK_x,      spawn,          {.v = fmgrcmd } },
 };
 
 /* button definitions */
