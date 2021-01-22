@@ -11,7 +11,7 @@ static const char dmenufont[]       = "monospace:size=11";
 static const char NormColorFG[]     = "#D8DEE9"; /* Font color */
 static const char NormColorBG[]     = "#2E3440"; /* Background color */
 static const char NormColorBorder[] = "#4C566A"; /* Inactive window border color */
-static const char SelColorFG[]      = "#88C0D0"; /* Current tag and window font color */
+static const char SelColorFG[]      = "#ECEFF4"; /* Current tag and window font color */
 static const char SelColorBG[]      = "#4C566A"; /* Top bar second color */
 static const char SelColorBorder[]  = "#88C0D0"; /* Active window border color */
 
