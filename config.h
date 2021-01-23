@@ -81,77 +81,79 @@ static const char *fmgrcmd[]    = { "alacritty", "-e", "ranger", NULL };
 static const char *prtscrcmd[]  = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
+	/* modifier             key             function        argument */
         /* DWM */
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,     XK_q,           quit,           {0} },
 
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,               XK_b,           togglebar,      {0} },
+	{ MODKEY|ShiftMask,     XK_c,           killclient,     {0} },
 
         /* Monitors */
-	{ MODKEY,                       XK_m,      focusmon,       {.i = +1 } },
-	//{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	//{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_m,      tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY,                       XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,               XK_KP_Insert,   focusmon,       {.i = +1 } },
+	{ MODKEY,               XK_m,           focusmon,       {.i = +1 } },
+	//{ MODKEY,             XK_comma,       focusmon,       {.i = -1 } },
+	//{ MODKEY,             XK_period,      focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,     XK_KP_Insert,   tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,     XK_m,           tagmon,         {.i = +1 } },
+	{ MODKEY,               XK_comma,       tagmon,         {.i = -1 } },
+	{ MODKEY,               XK_period,      tagmon,         {.i = +1 } },
 
         /* Tags */
-	{ ALTKEY,                       XK_Tab,    view,           {0} },
+	{ ALTKEY,               XK_Tab,    view,                {0} },
 
         // Keypad without numlock
-	TAGKEYS(                        XK_KP_End,                 0)
-	TAGKEYS(                        XK_KP_Down,                1)
-	TAGKEYS(                        XK_KP_Next,                2)
-	TAGKEYS(                        XK_KP_Left,                3)
-	TAGKEYS(                        XK_KP_Begin,               4)
-	TAGKEYS(                        XK_KP_Right,               5)
-	TAGKEYS(                        XK_KP_Home,                6)
-	TAGKEYS(                        XK_KP_Up,                  7)
-	TAGKEYS(                        XK_KP_Prior,               8)
+	TAGKEYS(                XK_KP_End,      0)
+	TAGKEYS(                XK_KP_Down,     1)
+	TAGKEYS(                XK_KP_Next,     2)
+	TAGKEYS(                XK_KP_Left,     3)
+	TAGKEYS(                XK_KP_Begin,    4)
+	TAGKEYS(                XK_KP_Right,    5)
+	TAGKEYS(                XK_KP_Home,     6)
+	TAGKEYS(                XK_KP_Up,       7)
+	TAGKEYS(                XK_KP_Prior,    8)
 
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY,               XK_0,           view,           {.ui = ~0 } },
+	{ MODKEY|ShiftMask,     XK_0,           tag,            {.ui = ~0 } },
 
 	/* Layout */
         // Change layout
-	{ MODKEY|ControlMask,           XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ControlMask,           XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ControlMask,   XK_t,           setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ControlMask,   XK_f,           setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ControlMask,   XK_m,           setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ControlMask,   XK_space,       setlayout,      {0} },
+	{ MODKEY|ShiftMask,     XK_space,       togglefloating, {0} },
 
-        { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-        { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-        { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+        { MODKEY,               XK_minus,       setgaps,        {.i = -1 } },
+        { MODKEY,               XK_equal,       setgaps,        {.i = +1 } },
+        { MODKEY|ShiftMask,     XK_equal,       setgaps,        {.i = 0  } },
 
         // Change master window size
-	{ MODKEY,                       XK_j,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_k,      setmfact,       {.f = +0.05} },
+	{ MODKEY,               XK_j,           setmfact,       {.f = -0.05} },
+	{ MODKEY,               XK_k,           setmfact,       {.f = +0.05} },
 
         // Move windows from slave to master and vice versa
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY,               XK_i,           incnmaster,     {.i = +1 } },
+	{ MODKEY,               XK_d,           incnmaster,     {.i = -1 } },
 
         /* Windows */
         // Changed focused window
-        { MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_h,      focusstack,     {.i = -1 } },
+        { MODKEY,               XK_l,           focusstack,     {.i = +1 } },
+	{ MODKEY,               XK_h,           focusstack,     {.i = -1 } },
 
         // Move focused window to/from master
-	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
+	{ MODKEY|ShiftMask,     XK_Return,      zoom,           {0} },
 
         /* Programs */
-	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-        { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
-        { MODKEY,                       XK_c,      spawn,          {.v = workcmd } },
-        { MODKEY,                       XK_s,      spawn,          {.v = mediacmd } },
-        { MODKEY,                       XK_r,      spawn,          {.v = rsscmd } },
-        { MODKEY,                       XK_x,      spawn,          {.v = fmgrcmd } },
+	{ MODKEY,               XK_space,       spawn,          {.v = dmenucmd } },
+	{ MODKEY,               XK_Return,      spawn,          {.v = termcmd } },
+        { MODKEY,               XK_w,           spawn,          {.v = browsercmd } },
+        { MODKEY,               XK_c,           spawn,          {.v = workcmd } },
+        { MODKEY,               XK_s,           spawn,          {.v = mediacmd } },
+        { MODKEY,               XK_r,           spawn,          {.v = rsscmd } },
+        { MODKEY,               XK_x,           spawn,          {.v = fmgrcmd } },
 
         /* Other */
-        { 0,                            XK_Print,  spawn,          {.v = prtscrcmd } },
+        { 0,                    XK_Print,       spawn,          {.v = prtscrcmd } },
 };
 
 /* button definitions */
