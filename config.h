@@ -46,7 +46,7 @@ static const Rule rules[] = {
 
 
 /* layout(s) */
-static const float mfact     = 0.55;    /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5;    /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;       /* number of clients in master area */
 static const int resizehints = 0;       /* 1 means respect size hints in tiled resizals */
 
@@ -78,6 +78,7 @@ static const char *workcmd[]    = { "chromium", NULL };
 static const char *mediacmd[]   = { "alacritty", "-e", "ncmpcpp", NULL };
 static const char *rsscmd[]     = { "alacritty", "-e", "newsboat", NULL };
 static const char *fmgrcmd[]    = { "alacritty", "-e", "ranger", NULL };
+static const char *prtscrcmd[]  = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -148,6 +149,9 @@ static Key keys[] = {
         { MODKEY,                       XK_s,      spawn,          {.v = mediacmd } },
         { MODKEY,                       XK_r,      spawn,          {.v = rsscmd } },
         { MODKEY,                       XK_x,      spawn,          {.v = fmgrcmd } },
+
+        /* Other */
+        { 0,                            XK_Print,  spawn,          {.v = prtscrcmd } },
 };
 
 /* button definitions */
