@@ -44,7 +44,6 @@ static const Rule rules[] = {
         { "Gimp",       NULL,     NULL,           0,         1,          0,           0,        -1 },
         { "Firefox",    NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
         { "Alacritty",  NULL,     NULL,           0,         0,          1,           0,        -1 },
-        { "lf",         NULL,     NULL,           0,         0,          1,           0,        -1 },
         { NULL,         NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -150,6 +149,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,               spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,              spawn,                  SHCMD("$TERMINAL") },
         { MODKEY,                       XK_w,                   spawn,                  SHCMD("$BROWSER") },
+        { MODKEY,                       XK_p,                   spawn,                  SHCMD("$PBROWSER") },
         { MODKEY,                       XK_c,                   spawn,                  SHCMD("$WBROWSER") },
         { MODKEY,                       XK_s,                   spawn,                  SHCMD("$TERMINAL -e $PLAYER") },
         { MODKEY,                       XK_r,                   spawn,                  SHCMD("$TERMINAL -e $RSSREADER") },
