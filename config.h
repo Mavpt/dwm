@@ -172,7 +172,7 @@ static Key keys[] = {
         /* Other */
         { 0,                            XK_Print,                       spawn,          SHCMD("flameshot gui") },
         { MODKEY,			XK_Scroll_Lock,	                spawn,		SHCMD("killall screenkey || screenkey &") },
-        { MODKEY|ShiftMask,             XK_m,                           spawn,          SHCMD("remaps") },
+        { MODKEY|ShiftMask,             XK_a,                           spawn,          SHCMD("remaps") },
 };
 
 /* button definitions */
