@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 2;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -126,8 +126,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,               togglefloating, {0} },
 
         { MODKEY,                       XK_minus,               setgaps,        {.i = -1 } },
-        { MODKEY,                       XK_equal,               setgaps,        {.i = +1 } },
-        { MODKEY|ShiftMask,             XK_equal,               setgaps,        {.i = 0  } },
+        { MODKEY,                       XK_plus,                setgaps,        {.i = +1 } },
+        { MODKEY,                       XK_equal,               setgaps,        {.i = 0  } },
 
         // Change master window size
 	{ MODKEY,                       XK_j,                   setmfact,       {.f = -0.05} },
