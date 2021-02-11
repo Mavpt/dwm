@@ -33,7 +33,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
         /* xprop(1):
@@ -92,11 +92,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,                   killclient,     {0} },
 
         /* Monitors */
-	{ MODKEY,                       XK_KP_Insert,           focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_KP_Delete,           focusmon,       {.i = +1 } },
 	{ MODKEY,                       XK_m,                   focusmon,       {.i = +1 } },
 	//{ MODKEY,                     XK_comma,               focusmon,       {.i = -1 } },
 	//{ MODKEY,                     XK_period,              focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_KP_Insert,           tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_KP_Delete,           tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_m,                   tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_comma,               tagmon,         {.i = -1 } },
 	{ MODKEY,                       XK_period,              tagmon,         {.i = +1 } },
@@ -105,15 +105,26 @@ static Key keys[] = {
 	{ ALTKEY,                       XK_Tab,                 view,           {0} },
 
         // Keypad without numlock
-	TAGKEYS(                        XK_KP_End,              0)
-	TAGKEYS(                        XK_KP_Down,             1)
-	TAGKEYS(                        XK_KP_Next,             2)
-	TAGKEYS(                        XK_KP_Left,             3)
-	TAGKEYS(                        XK_KP_Begin,            4)
-	TAGKEYS(                        XK_KP_Right,            5)
-	TAGKEYS(                        XK_KP_Home,             6)
-	TAGKEYS(                        XK_KP_Up,               7)
-	TAGKEYS(                        XK_KP_Prior,            8)
+	TAGKEYS(                        XK_KP_Insert,           0)
+	TAGKEYS(                        XK_asterisk,            0)
+	TAGKEYS(                        XK_KP_End,              1)
+	TAGKEYS(                        XK_parenleft,           1)
+	TAGKEYS(                        XK_KP_Down,             2)
+	TAGKEYS(                        XK_parenright,          2)
+	TAGKEYS(                        XK_KP_Next,             3)
+	TAGKEYS(                        XK_braceright,          3)
+	TAGKEYS(                        XK_KP_Left,             4)
+	TAGKEYS(                        XK_plus,                4)
+	TAGKEYS(                        XK_KP_Begin,            5)
+	TAGKEYS(                        XK_braceleft,           5)
+	TAGKEYS(                        XK_KP_Right,            6)
+	TAGKEYS(                        XK_bracketright,        6)
+	TAGKEYS(                        XK_KP_Home,             7)
+	TAGKEYS(                        XK_bracketleft,         7)
+	TAGKEYS(                        XK_KP_Up,               8)
+	TAGKEYS(                        XK_exclam,              8)
+	TAGKEYS(                        XK_equal,               9)
+	TAGKEYS(                        XK_KP_Prior,            9)
 
 	{ MODKEY,                       XK_0,                   view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                   tag,            {.ui = ~0 } },
