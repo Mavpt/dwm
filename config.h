@@ -7,8 +7,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12" };
-static const char dmenufont[]       = "monospace:size=11";
+static const char *fonts[]          = { "monospace:size=11" };
+static const char dmenufont[]       =   "monospace:size=11"  ;
 
 static const char NormColorFG[]     = "#D8DEE9"; /* Font color */
 static const char NormColorBG[]     = "#2E3440"; /* Background color */
@@ -47,6 +47,7 @@ static const Rule rules[] = {
         { "Brave-browser",      NULL,     NULL,           1<<0,      0,          1,           0,         0 },
         { "discord",            NULL,     NULL,           1<<0,      0,          1,           0,         0 },
         { "zoom",               NULL,     NULL,           1<<0,      0,          1,           0,         1 },
+        { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          1,           0,         1 },
         { "Chromium",           NULL,     NULL,           1<<1,      0,          1,           0,        -1 },
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
         { "LibreWolf",          NULL,     NULL,           1<<5,      0,          1,           0,        -1 },
