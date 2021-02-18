@@ -44,13 +44,13 @@ static const Rule rules[] = {
         { "Alacritty",          NULL,     NULL,           0,         0,          1,           0,        -1 },
         { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 
-        { "Brave-browser",      NULL,     NULL,           1<<0,      0,          1,           0,         0 },
-        { "discord",            NULL,     NULL,           1<<0,      0,          1,           0,         0 },
-        { "zoom",               NULL,     NULL,           1<<0,      0,          1,           0,         1 },
-        { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          1,           0,         1 },
-        { "Chromium",           NULL,     NULL,           1<<1,      0,          1,           0,        -1 },
+        { "Brave-browser",      NULL,     NULL,           1<<0,      0,          0,           0,         0 },
+        { "discord",            NULL,     NULL,           1<<0,      0,          0,           0,         0 },
+        { "zoom",               NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "Chromium",           NULL,     NULL,           1<<1,      0,          0,           0,        -1 },
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
-        { "LibreWolf",          NULL,     NULL,           1<<5,      0,          1,           0,        -1 },
+        { "LibreWolf",          NULL,     NULL,           1<<5,      0,          0,           0,        -1 },
 };
 
 /* layout(s) */
