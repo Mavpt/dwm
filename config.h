@@ -33,7 +33,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "7", "8", "9" };
 
 static const Rule rules[] = {
         /* xprop(1):
@@ -51,6 +51,7 @@ static const Rule rules[] = {
         { "Chromium",           NULL,     NULL,           1<<1,      0,          0,           0,        -1 },
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
         { "LibreWolf",          NULL,     NULL,           1<<5,      0,          0,           0,        -1 },
+        { NULL,                 NULL,     "MAIL",         1<<6,      0,          1,          -1,        -1 },
 };
 
 /* layout(s) */
@@ -98,13 +99,13 @@ static Key keys[] = {
 
         /* Monitors */
 	{ MODKEY,                       XK_KP_Delete,           focusmon,       {.i = +1 } },
-	{ MODKEY,                       XK_m,                   focusmon,       {.i = +1 } },
-	//{ MODKEY,                     XK_comma,               focusmon,       {.i = -1 } },
-	//{ MODKEY,                     XK_period,              focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_KP_Delete,           tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_m,                   tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_comma,               tagmon,         {.i = -1 } },
-	{ MODKEY,                       XK_period,              tagmon,         {.i = +1 } },
+	//{ MODKEY,                       XK_m,                   focusmon,       {.i = +1 } },
+	//{ MODKEY|ShiftMask,             XK_m,                   tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_comma,               focusmon,       {.i = -1 } },
+	//{ MODKEY|ShiftMask,             XK_comma,               tagmon,         {.i = -1 } },
+	{ MODKEY,                       XK_period,              tagmon,         {.i = -1 } },
+	//{ MODKEY|ShiftMask,             XK_period,              tagmon,         {.i = +1 } },
 
         /* Tags */
 	{ ALTKEY,                       XK_Tab,                 view,           {0} },
@@ -171,6 +172,7 @@ static Key keys[] = {
         { MODKEY,                       XK_s,                   spawn,                  SHCMD("$TERMINAL -e $PLAYER") },
         { MODKEY,                       XK_r,                   spawn,                  SHCMD("$TERMINAL -t RSS -e $RSSREADER") },
         { MODKEY,                       XK_x,                   spawn,                  SHCMD("$TERMINAL -e $FM") },
+        { MODKEY,                       XK_m,                   spawn,                  SHCMD("$TERMINAL -t MAIL -e $MAIL") },
 
         /* Fn Keys */
         { 0,                            XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t") },
