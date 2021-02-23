@@ -33,7 +33,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "8", "9" };
 
 static const Rule rules[] = {
         /* xprop(1):
@@ -42,16 +42,23 @@ static const Rule rules[] = {
          */
         /* class                instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
         { "Alacritty",          NULL,     NULL,           0,         0,          1,           0,        -1 },
-        { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+        { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, // xev
 
-        { "Brave-browser",      NULL,     NULL,           1<<0,      0,          0,           0,         0 },
-        { "discord",            NULL,     NULL,           1<<0,      0,          0,           0,         0 },
-        { "zoom",               NULL,     NULL,           1<<0,      0,          0,           0,         1 },
-        { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "Brave-browser",      NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "discord",            NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "zoom",               NULL,     NULL,           1<<0,      0,          0,           0,         0 },
+        { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          0,           0,         0 },
+
         { "Chromium",           NULL,     NULL,           1<<1,      0,          0,           0,        -1 },
+
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
+
         { "LibreWolf",          NULL,     NULL,           1<<5,      0,          0,           0,        -1 },
+        { "LBRY",               NULL,     NULL,           1<<5,      0,          0,           0,         1 },
+
         { NULL,                 NULL,     "MAIL",         1<<6,      0,          1,          -1,        -1 },
+
+        { "libreoffice",        NULL,     NULL,           1<<7,      0,          0,           0,        -1 },
 };
 
 /* layout(s) */
