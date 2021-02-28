@@ -57,6 +57,7 @@ static const Rule rules[] = {
         { "LBRY",               NULL,     NULL,           1<<5,      0,          0,           0,         1 },
 
         { NULL,                 NULL,     "MAIL",         1<<6,      0,          1,          -1,        -1 },
+        { "Thunderbird",        NULL,     NULL,           1<<6,      0,          1,          -1,        -1 }, // Thunderbird
 
         { "libreoffice",        NULL,     NULL,           1<<7,      0,          0,           0,        -1 },
 };
