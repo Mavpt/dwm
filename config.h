@@ -41,8 +41,6 @@ static const Rule rules[] = {
          *      WM_NAME(STRING) = title
          */
         /* class                instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-        { "Alacritty",          NULL,     NULL,           0,         0,          1,           0,        -1 },
-        { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, // xev
 
         { "Brave-browser",      NULL,     NULL,           1<<0,      0,          0,           0,         1 },
         { "discord",            NULL,     NULL,           1<<0,      0,          0,           0,         1 },
@@ -50,6 +48,13 @@ static const Rule rules[] = {
         { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          0,           0,         0 },
 
         { "Chromium",           NULL,     NULL,           1<<1,      0,          0,           0,        -1 },
+
+        { "Chromium",           NULL,     NULL,           1<<1,      0,          0,           0,        -1 },
+
+        { "Alacritty",          NULL,     NULL,           1<<2,      0,          1,           0,        -1 },
+        { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, // xev
+
+        { "RStudio",            NULL,     NULL,           1<<3,      0,          0,           0,        -1 },
 
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
 
