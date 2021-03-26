@@ -51,7 +51,7 @@ static const Rule rules[] = {
 
         { "Chromium",           NULL,     NULL,           1<<1,      0,          0,           0,        -1 },
 
-        { "Alacritty",          NULL,     NULL,           1<<2,      0,          1,           0,        -1 },
+        { "Alacritty",          NULL,     NULL,           0,         0,          1,           0,        -1 },
         { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, // xev
 
         { "RStudio",            NULL,     NULL,           1<<3,      0,          0,           0,        -1 },
@@ -185,7 +185,8 @@ static Key keys[] = {
         { MODKEY,                       XK_s,                   spawn,                  SHCMD("$TERMINAL -e $PLAYER") },
         { MODKEY,                       XK_r,                   spawn,                  SHCMD("$TERMINAL -t RSS -e $RSSREADER") },
         { MODKEY,                       XK_x,                   spawn,                  SHCMD("$TERMINAL -e $FM") },
-        { MODKEY,                       XK_m,                   spawn,                  SHCMD("$TERMINAL -t MAIL -e $MAIL") },
+        //{ MODKEY,                       XK_m,                   spawn,                  SHCMD("$TERMINAL -t MAIL -e $MAIL") },
+        { MODKEY,                       XK_m,                   spawn,                  SHCMD("$MAIL") },
 
         /* Fn Keys */
         { 0,                            XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t") },
