@@ -43,7 +43,8 @@ static const Rule rules[] = {
         /* class                instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 
         { "Brave-browser",      NULL,     NULL,           1<<0,      0,          0,           0,         1 },
-        { "discord",            NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "Signal",             NULL,     NULL,           1<<0,      0,          0,           0,         1 },
+        { "discord",            NULL,     NULL,           1<<0,      0,          0,           0,         0 },
         { "zoom",               NULL,     NULL,           1<<0,      0,          0,           0,         0 },
         { "Jami-gnome",         NULL,     NULL,           1<<0,      0,          0,           0,         0 },
 
@@ -55,6 +56,7 @@ static const Rule rules[] = {
         { NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, // xev
 
         { "RStudio",            NULL,     NULL,           1<<3,      0,          0,           0,        -1 },
+        { "Mathematica",        NULL,     NULL,           1<<3,      0,          0,           0,        -1 },
 
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
 
@@ -178,6 +180,8 @@ static Key keys[] = {
 
         /* Programs */
 	{ MODKEY,                       XK_space,               spawn,                  {.v = dmenucmd } },
+	{ MODKEY,                       XK_y,                   spawn,                  SHCMD("ytfzf -D") },
+
 	{ MODKEY,                       XK_Return,              spawn,                  SHCMD("$TERMINAL") },
         { MODKEY,                       XK_w,                   spawn,                  SHCMD("$BROWSER") },
         { MODKEY,                       XK_p,                   spawn,                  SHCMD("$PBROWSER") },
