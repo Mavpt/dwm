@@ -23,7 +23,7 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { SelColorFG , SelColorBG , SelColorBorder  },
 };
 
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = OPAQUE; //0xd0;
 static const unsigned int borderalpha = OPAQUE;
 
 static const unsigned int alphas[][3]      = {
