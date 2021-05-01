@@ -115,12 +115,8 @@ static Key keys[] = {
         /* Monitors */
 	{ MODKEY,                       XK_KP_Delete,           focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_KP_Delete,           tagmon,         {.i = +1 } },
-	//{ MODKEY,                       XK_m,                   focusmon,       {.i = +1 } },
-	//{ MODKEY|ShiftMask,             XK_m,                   tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_comma,               focusmon,       {.i = -1 } },
-	//{ MODKEY|ShiftMask,             XK_comma,               tagmon,         {.i = -1 } },
 	{ MODKEY,                       XK_period,              tagmon,         {.i = -1 } },
-	//{ MODKEY|ShiftMask,             XK_period,              tagmon,         {.i = +1 } },
 
         /* Tags */
 	{ ALTKEY,                       XK_Tab,                 view,           {0} },
@@ -158,10 +154,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_space,               setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,               togglefloating, {0} },
 
-        //{ MODKEY,                       XK_minus,               setgaps,        {.i = -1 } },
-        //{ MODKEY,                       XK_plus,                setgaps,        {.i = +1 } },
-        //{ MODKEY,                       XK_equal,               setgaps,        {.i = 0  } },
-
         // Change master window size
 	{ MODKEY,                       XK_j,                   setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_k,                   setmfact,       {.f = +0.05} },
@@ -189,7 +181,6 @@ static Key keys[] = {
         { MODKEY,                       XK_s,                   spawn,                  SHCMD("$TERMINAL -e $PLAYER") },
         { MODKEY,                       XK_r,                   spawn,                  SHCMD("$TERMINAL -t RSS -e $RSSREADER") },
         { MODKEY,                       XK_x,                   spawn,                  SHCMD("$TERMINAL -e $FM") },
-        //{ MODKEY,                       XK_m,                   spawn,                  SHCMD("$TERMINAL -t MAIL -e $MAIL") },
         { MODKEY,                       XK_m,                   spawn,                  SHCMD("$MAIL") },
 
         /* Fn Keys */
