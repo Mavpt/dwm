@@ -62,6 +62,7 @@ static const Rule rules[] = {
         { NULL,                 NULL,     "RSS",          1<<4,      0,          1,          -1,        -1 },
 
         { "LibreWolf",          NULL,     NULL,           1<<5,      0,          0,           0,        -1 },
+        { "Tor Browser",        NULL,     NULL,           1<<5,      0,          0,           0,        -1 },
         { "LBRY",               NULL,     NULL,           1<<5,      0,          0,           0,         1 },
 
         { NULL,                 NULL,     "MAIL",         1<<6,      0,          1,          -1,        -1 },
