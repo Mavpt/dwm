@@ -191,7 +191,7 @@ static Key keys[] = {
         { 0,                            XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t") },
 	{ 0,                            XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 3") },
 	{ 0,                            XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 3") },
-        { 0,                            XF86XK_Calculator,		spawn,		SHCMD("$TERMINAL -e python") },
+        { 0,                            XF86XK_Calculator,		spawn,		SHCMD("$TERMINAL -e bc") },
 
 	{ 0,                            XF86XK_AudioPlay,		spawn,		SHCMD("mpc toggle") },
 	{ 0,                            XF86XK_AudioStop,		spawn,		SHCMD("mpc stop") },
